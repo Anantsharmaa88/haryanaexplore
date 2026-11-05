@@ -1,0 +1,282 @@
+/* ==========================================================================
+   Explore Haryana - Responsive Layout Stylesheet
+   Ensures seamless experience on mobile, tablets, and desktops.
+   ========================================================================== */
+
+/* Tablet & Smaller Laptops (<= 1024px) */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.7rem;
+  }
+
+  .stats-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 24px;
+  }
+
+  .stat-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .stat-item:nth-child(3) {
+    border-top: 1px solid var(--border-color);
+    padding-top: 16px;
+  }
+
+  .stat-item:nth-child(4) {
+    border-top: 1px solid var(--border-color);
+    padding-top: 16px;
+    border-right: none;
+  }
+
+  .planner-form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .planner-btn-col {
+    grid-column: span 2;
+  }
+
+  .btn-generate-planner {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .reviews-container-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .modal-facts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .connectivity-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablets & Large Phones (<= 768px) */
+@media (max-width: 768px) {
+  .announcement-bar {
+    display: none; /* Hide top bar on mobile to conserve screen space */
+  }
+
+  .nav-container {
+    height: 64px;
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+  }
+
+  .mobile-nav-toggle.is-active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .mobile-nav-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-nav-toggle.is-active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .nav-links-menu {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #FFFFFF;
+    flex-direction: column;
+    padding: 24px;
+    gap: 18px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-120%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+  }
+
+  .nav-links-menu.nav-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .hero-section {
+    padding: 40px 0 60px;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+
+  .hero-search-wrapper {
+    flex-direction: column;
+    padding: 12px;
+    background: #FFFFFF;
+  }
+
+  .hero-search-input {
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+  }
+
+  .hero-search-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .filter-top-row {
+    flex-direction: column;
+  }
+
+  .filter-dropdowns {
+    flex-direction: column;
+  }
+
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destinations-grid.view-mode-list .destination-card {
+    flex-direction: column;
+  }
+
+  .destinations-grid.view-mode-list .card-media {
+    width: 100%;
+    height: 200px;
+  }
+
+  .planner-controls-pane {
+    padding: 24px 20px;
+  }
+
+  .planner-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .planner-btn-col {
+    grid-column: 1;
+  }
+
+  .itinerary-result-area {
+    padding: 20px;
+  }
+
+  .itinerary-stats-ribbon {
+    gap: 16px;
+  }
+
+  .slot-destination-card {
+    flex-direction: column;
+  }
+
+  .slot-destination-card img {
+    width: 100%;
+    height: 140px;
+  }
+
+  .attire-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-dialog {
+    max-height: 94vh;
+    border-radius: var(--radius-lg);
+  }
+
+  .modal-hero-header {
+    height: 200px;
+  }
+
+  .modal-title {
+    font-size: 1.45rem;
+  }
+
+  .modal-body-scrollable {
+    padding: 20px;
+  }
+
+  .modal-action-footer {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .modal-action-footer button,
+  .modal-action-footer a {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .toast {
+    min-width: 90vw;
+    right: 5vw;
+    left: 5vw;
+    bottom: 16px;
+  }
+}
+
+/* Small Smart Phones (<= 480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .stats-card-container {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+  }
+
+  .stat-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .card-footer-actions {
+    flex-wrap: wrap;
+  }
+
+  .btn-card-details {
+    width: 100%;
+  }
+
+  .btn-card-directions, .btn-card-planner {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .culture-tab-btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}
+

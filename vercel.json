@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "routes": [
+    {
+      "src": "/css/(.*)",
+      "dest": "/css/$1",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Cache-Control": "public, max-age=3600"
+      }
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "/js/$1",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=3600"
+      }
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=86400"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Referrer-Policy", "value": "no-referrer" }
+      ]
+    }
+  ]
+}
+
