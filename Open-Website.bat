@@ -1,0 +1,6 @@
+@echo off
+title Opening Explore Haryana...
+echo Opening Explore Haryana in your web browser...
+start "" "%~dp0index.html"
+exit
+
